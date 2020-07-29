@@ -9,6 +9,7 @@ import {
 import Users from "./user/pages/Users";
 import NewRecipe from "./recipes/pages/NewRecipe";
 import Navigationbar from "./shared/components/Navigation/Navigationbar";
+import UserRecipes from "./recipes/pages/UserRecipes";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
         <Switch>
           <Route path="/home" exact>
             <Users />
+          </Route>
+          <Route path="/:userId/recipes" exact>
+            <UserRecipes />
           </Route>
           <Route path="/recipes/new" exact>
             <NewRecipe />

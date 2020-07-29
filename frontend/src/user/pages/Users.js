@@ -10,7 +10,7 @@ const Users = () => {
       image:
         "http://www.pe.senac.br/wp-content/uploads/2019/03/562910-PL27RV-687_2.jpg",
       recipes: 3,
-    },
+    }
   ];
   return <UsersList items={USERS} />;
 };
