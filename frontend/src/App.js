@@ -7,20 +7,20 @@ import {
 } from "react-router-dom";
 
 import Users from "./user/pages/Users";
-import NewPlace from "./recipes/pages/NewRecipe";
-import MainNavigation from "./shared/components/Navigation/MainNavigation";
+import NewRecipe from "./recipes/pages/NewRecipe";
+import Navigationbar from "./shared/components/Navigation/Navigationbar";
 
 function App() {
   return (
     <Router>
-      <MainNavigation />
+      <Navigationbar />
       <main>
         <Switch>
-          <Route path="/" exact>
+          <Route path="/home" exact>
             <Users />
           </Route>
           <Route path="/recipes/new" exact>
-            <NewPlace />
+            <NewRecipe />
           </Route>
           <Redirect to="/" />
         </Switch>

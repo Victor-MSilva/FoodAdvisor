@@ -1,0 +1,14 @@
+.navbar_nav {
+    background-color: #F2F2F2;
+    font-family: 'Satisfy', cursive;
+    font-size: 1.1rem;
+    padding: 0.2rem;
+}
+
+#navBrand {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.7rem;
+    margin-right: 2rem;
+    margin-left: 1rem;
+    opacity: 0.8;
+}
