@@ -14,7 +14,7 @@ const Navigationbar = () => {
           <Nav className="mr-auto">
             <Nav.Link href="/home">Home</Nav.Link>
             <Nav.Link href="/u1/recipes">My Recipes</Nav.Link>
-            <Nav.Link href="/recipes/new">Add Recipe</Nav.Link>
+            <Nav.Link href="/:userId/recipes/new">Add Recipe</Nav.Link>
           </Nav>
           <Nav inline className="mr-3">
             <Nav.Link href="/signin">Sign In</Nav.Link>

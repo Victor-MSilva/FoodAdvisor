@@ -1,0 +1,9 @@
+.ingredientsText {
+    width: 350px;
+    height: 30px;
+}
+
+.ingredientsText:focus {
+    box-shadow: none;
+
+}

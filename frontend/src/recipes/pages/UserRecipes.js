@@ -1,4 +1,5 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
 import PlaceList from "../components/RecipeList";
 
@@ -22,7 +23,7 @@ const DUMMY_RECIPES = [
       "For the seed mix, heat oven to 180C/160C fan/gas 4 and line a baking tray with parchment. Tip the seeds, coconut and almonds into a bowl, add the cinnamon and drizzle over the honey, agave or maple syrup. Toss until everything is well coated, then scatter over the baking tray in an even layer. Bake for 10-15 mins, stirring every 5 mins or so, until the seeds are lightly toasted. Leave to cool. Will keep in an airtight container for up to 1 month.",
       "Put the avocado, mango, spinach, milk, nut butter, frozen banana slices and honey (if using) in a blender and whizz to a thick smoothie consistency – you may have to scrape down the sides with a spoon a few times. Divide between two bowls and arrange the fruit on top. Scatter 1-2 tbsp of the seed mix over each bowl and eat straight away.",
     ],
-    creator: "Victor",
+    creator: "u1",
     creationDate: "29/07/2020",
   },
   {
@@ -44,7 +45,7 @@ const DUMMY_RECIPES = [
       "For the seed mix, heat oven to 180C/160C fan/gas 4 and line a baking tray with parchment. Tip the seeds, coconut and almonds into a bowl, add the cinnamon and drizzle over the honey, agave or maple syrup. Toss until everything is well coated, then scatter over the baking tray in an even layer. Bake for 10-15 mins, stirring every 5 mins or so, until the seeds are lightly toasted. Leave to cool. Will keep in an airtight container for up to 1 month.",
       "Put the avocado, mango, spinach, milk, nut butter, frozen banana slices and honey (if using) in a blender and whizz to a thick smoothie consistency – you may have to scrape down the sides with a spoon a few times. Divide between two bowls and arrange the fruit on top. Scatter 1-2 tbsp of the seed mix over each bowl and eat straight away.",
     ],
-    creator: "Victor",
+    creator: "u2",
     creationDate: "29/07/2020",
   },
   {
@@ -66,7 +67,7 @@ const DUMMY_RECIPES = [
       "For the seed mix, heat oven to 180C/160C fan/gas 4 and line a baking tray with parchment. Tip the seeds, coconut and almonds into a bowl, add the cinnamon and drizzle over the honey, agave or maple syrup. Toss until everything is well coated, then scatter over the baking tray in an even layer. Bake for 10-15 mins, stirring every 5 mins or so, until the seeds are lightly toasted. Leave to cool. Will keep in an airtight container for up to 1 month.",
       "Put the avocado, mango, spinach, milk, nut butter, frozen banana slices and honey (if using) in a blender and whizz to a thick smoothie consistency – you may have to scrape down the sides with a spoon a few times. Divide between two bowls and arrange the fruit on top. Scatter 1-2 tbsp of the seed mix over each bowl and eat straight away.",
     ],
-    creator: "Victor",
+    creator: "u2",
     creationDate: "29/07/2020",
   },
   {
@@ -88,7 +89,7 @@ const DUMMY_RECIPES = [
       "For the seed mix, heat oven to 180C/160C fan/gas 4 and line a baking tray with parchment. Tip the seeds, coconut and almonds into a bowl, add the cinnamon and drizzle over the honey, agave or maple syrup. Toss until everything is well coated, then scatter over the baking tray in an even layer. Bake for 10-15 mins, stirring every 5 mins or so, until the seeds are lightly toasted. Leave to cool. Will keep in an airtight container for up to 1 month.",
       "Put the avocado, mango, spinach, milk, nut butter, frozen banana slices and honey (if using) in a blender and whizz to a thick smoothie consistency – you may have to scrape down the sides with a spoon a few times. Divide between two bowls and arrange the fruit on top. Scatter 1-2 tbsp of the seed mix over each bowl and eat straight away.",
     ],
-    creator: "Victor",
+    creator: "u1",
     creationDate: "29/07/2020",
   },
   {
@@ -110,7 +111,7 @@ const DUMMY_RECIPES = [
       "For the seed mix, heat oven to 180C/160C fan/gas 4 and line a baking tray with parchment. Tip the seeds, coconut and almonds into a bowl, add the cinnamon and drizzle over the honey, agave or maple syrup. Toss until everything is well coated, then scatter over the baking tray in an even layer. Bake for 10-15 mins, stirring every 5 mins or so, until the seeds are lightly toasted. Leave to cool. Will keep in an airtight container for up to 1 month.",
       "Put the avocado, mango, spinach, milk, nut butter, frozen banana slices and honey (if using) in a blender and whizz to a thick smoothie consistency – you may have to scrape down the sides with a spoon a few times. Divide between two bowls and arrange the fruit on top. Scatter 1-2 tbsp of the seed mix over each bowl and eat straight away.",
     ],
-    creator: "Victor",
+    creator: "u1",
     creationDate: "29/07/2020",
   },
   {
@@ -132,13 +133,15 @@ const DUMMY_RECIPES = [
       "For the seed mix, heat oven to 180C/160C fan/gas 4 and line a baking tray with parchment. Tip the seeds, coconut and almonds into a bowl, add the cinnamon and drizzle over the honey, agave or maple syrup. Toss until everything is well coated, then scatter over the baking tray in an even layer. Bake for 10-15 mins, stirring every 5 mins or so, until the seeds are lightly toasted. Leave to cool. Will keep in an airtight container for up to 1 month.",
       "Put the avocado, mango, spinach, milk, nut butter, frozen banana slices and honey (if using) in a blender and whizz to a thick smoothie consistency – you may have to scrape down the sides with a spoon a few times. Divide between two bowls and arrange the fruit on top. Scatter 1-2 tbsp of the seed mix over each bowl and eat straight away.",
     ],
-    creator: "Victor",
+    creator: "u1",
     creationDate: "29/07/2020",
   },
 ];
 
 const UserRecipes = () => {
-  return <PlaceList items={DUMMY_RECIPES} />;
+  const userId = useParams().userId;
+  const loadedRecipes = DUMMY_RECIPES.filter(recipe => recipe.creator === userId);
+  return <PlaceList items={loadedRecipes} />;
 };
 
 export default UserRecipes;

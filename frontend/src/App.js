@@ -23,7 +23,7 @@ function App() {
           <Route path="/:userId/recipes" exact>
             <UserRecipes />
           </Route>
-          <Route path="/recipes/new" exact>
+          <Route path="/:userId/recipes/new" exact>
             <NewRecipe />
           </Route>
           <Redirect to="/" />
