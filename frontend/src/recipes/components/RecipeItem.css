@@ -1,4 +1,11 @@
 .styleButton {
-    margin-top: 1rem;
-    margin-left: 2rem;
+    margin-left: 0.5rem;
+    float: right;
+    height: 40px;
+    width: 40px;
+}
+
+.creatorStyle {
+    color: #D93D1A;
+    padding-top: 2px;
 }

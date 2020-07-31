@@ -7,7 +7,7 @@ import "./Navigationbar.css";
 const Navigationbar = () => {
   return (
     <div>
-      <Navbar collapseOnSelect expand="lg" sticky="top" className="navbar_nav">
+      <Navbar collapseOnSelect expand="lg" fixed="top" variant="dark" className="navbar_nav">
         <Navbar.Brand className="ml-4" id="navBrand" href="/">FoodAdvisor</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

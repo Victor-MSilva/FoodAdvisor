@@ -17,7 +17,7 @@ const RecipeItem = (props) => {
         <Card.Text>
           <Ingredients items={props.ingredients} />
         </Card.Text>
-        <div>
+        <div className="container">
           <Button href={"/"+props.creatorId+"/recipes/"+props.id+"/edit"} className="styleButton" variant="outline-info">
             <FontAwesomeIcon icon={faEdit} />
           </Button>
@@ -27,7 +27,8 @@ const RecipeItem = (props) => {
         </div>
       </Card.Body>
       <Card.Footer>
-        <small className="text-muted">Shared in {props.creationDate}</small>
+        <small className="float-left text-muted">Shared in {props.creationDate}</small>
+        <small className="inline float-right text-muted">By <span className="creatorStyle">{props.creatorName}</span></small>
       </Card.Footer>
     </Card>
   );

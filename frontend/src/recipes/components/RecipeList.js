@@ -28,9 +28,10 @@ const RecipeList = (props) => {
               image={recipe.imageUrl}
               title={recipe.title}
               ingredients={recipe.ingredients}
-              method={recipe.method}
+              steps={recipe.steps}
               creatorId={recipe.creator}
               creationDate={recipe.creationDate}
+              creatorName={recipe.creatorName}
             />
           </Col>
         ))}
